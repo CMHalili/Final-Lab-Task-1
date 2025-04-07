@@ -27,3 +27,6 @@
 
 * Define manager_id as a unique integer, auto-increment, and primary key.
 * Define employee_id as an integer, which will be a foreign key referencing employee_id in the employees table
+
+## Query Statements
+![Image]()
