@@ -46,7 +46,7 @@
 ![Image](https://github.com/CMHalili/EDM-V3/blob/cc6a7c0145de1c9e9beef93e4acc90b7d0943e4c/Images/task%205%20Qs.png)
 
 ## Table Structure
-#1. Employees Table:
+# 1. Employees Table:
 ![Image](https://github.com/CMHalili/EDM-V3/blob/cc6a7c0145de1c9e9beef93e4acc90b7d0943e4c/Images/Task%201%20Tbl%20Structure.png)
 
 # 2. Department Table:
