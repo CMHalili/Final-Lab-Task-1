@@ -1,4 +1,4 @@
-## Final-Lab-Task-1
+## [Final-Lab-Task-1](
 This portfolio is about learning MySQL using a sample company database by writing simple SQL queries, creating tables, and showing the database design. It also includes SQL files that show how the database and tables were made.
 
 # Step 1: Create the employees table:
