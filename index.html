@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finals Lab Task 1 - MySQL Basics</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #1c1e21;
+      overflow-x: hidden;
+      background: url('https://img1.picmix.com/output/stamp/normal/0/7/8/0/2580870_8444e.gif') repeat;
+      background-size: 200px;
+    }
+
+    header {
+      padding: 3rem 2rem 1rem;
+      background-color: #00CDFEcc;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      text-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #00CDFEcc;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      color: #1877f2;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .card p, .card a {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #1c1e21;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    footer {
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      background-color: #00CDFEcc;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Finals Lab Task 1</h1>
+    <p>MySQL Basics</p>
+  </header>
+
+  <div style="max-width: 900px; margin: 2rem auto; padding: 0 2rem;">
+    <section>
+      <h2>Portfolio Overview</h2>
+      <div class="card">
+        <p>This portfolio is about learning MySQL using a sample company database by writing simple SQL queries, creating tables, and showing the database design. It also includes SQL files that show how the database and tables were made.</p>
+      </div>
+
+      <h2>Step by Step Process</h2>
+      <div class="card">
+        <h3>Step 1: Create the employees table</h3>
+  <ul>
+    <li>Set <strong>employee_id</strong> as a unique integer that auto-increments and serves as the table's primary key.</li>
+    <li>Set <strong>employee_name</strong> as a VARCHAR type with a maximum of 255 characters and it cannot be null.</li>
+    <li>Set <strong>manager_id</strong> as an integer that acts as a foreign key, linking back to the employee_id within the same table.</li>
+  </ul>
+
+  <h3>Step 2: Create the departments table</h3>
+  <ul>
+    <li>Set <strong>department_id</strong> as a unique, auto-incrementing integer that functions as the primary key of the table.</li>
+    <li>Set <strong>department_name</strong> as a VARCHAR field with a limit of 255 characters, and require that it cannot be null.</li>
+  </ul>
+
+  <h3>Step 3: Create the employee_departments table</h3>
+  <ul>
+    <li>Set <strong>employee_id</strong> as an integer foreign key from employees.</li>
+    <li>Set <strong>department_id</strong> as an integer foreign key from departments.</li>
+    <li>Use a composite primary key of <strong>employee_id</strong> and <strong>department_id</strong>.</li>
+  </ul>
+
+  <h3>Step 4: Create the employee_projects table</h3>
+  <ul>
+    <li>Set <strong>employee_id</strong> as an integer foreign key from employees.</li>
+    <li>Set <strong>project_name</strong> as a non-null VARCHAR (255 characters).</li>
+  </ul>
+
+  <h3>Step 5: Create the managers table</h3>
+  <ul>
+    <li>Set <strong>manager_id</strong> as a unique auto-incrementing integer primary key.</li>
+    <li>Set <strong>employee_id</strong> as an integer foreign key from employees.</li>
+  </ul>
+
+  <h3>Query Statements</h3>
+  <h4>1. Employees Table:</h4>
+  <img src="https://github.com/user-attachments/assets/ae5115de-c211-4fe0-ae84-7a0695a2d2ff" alt="Employees Table">
+
+  <h4>2. Department Table:</h4>
+  <img src="https://github.com/user-attachments/assets/83aad58a-6b77-4d74-b90a-a4a1f414b444" alt="Department Table">
+
+  <h4>3. Employee Departments:</h4>
+  <img src="https://github.com/user-attachments/assets/338e8a42-10ef-45f5-8b35-81f62a26b5af" alt="Employee Departments">
+
+  <h4>4. Employee Projects:</h4>
+  <img src="https://github.com/user-attachments/assets/7013c794-d78b-45d0-b4a9-b2cff96dfd84" alt="Employee Projects">
+
+  <h4>5. Manager Table:</h4>
+  <img src="https://github.com/user-attachments/assets/85faf40b-4982-4be6-9e5e-05280c8fc1b5" alt="Manager Table">
+
+  <h3>Table Structure</h3>
+  <h4>1. Employees Table:</h4>
+  <img src="https://github.com/user-attachments/assets/e7d53d0f-a6ed-4b0f-8140-2580f348bb3a" alt="Employees Structure">
+
+  <h4>2. Department Table:</h4>
+  <img src="https://github.com/user-attachments/assets/36bf2ed4-be47-45af-99e5-bf40241e8434" alt="Departments Structure">
+
+  <h4>3. Employee Departments:</h4>
+  <img src="https://github.com/user-attachments/assets/06770a54-7f15-4d40-87f9-c705714f59c2" alt="Employee Departments Structure">
+
+  <h4>4. Employee Projects:</h4>
+  <img src="https://github.com/user-attachments/assets/8205fe7a-a409-48b5-92fd-b61afac9d1c8" alt="Employee Projects Structure">
+
+  <h4>5. Manager Table:</h4>
+  <img src="https://github.com/user-attachments/assets/c3bdd751-8772-4929-85f4-6f5ab1b45cd4" alt="Manager Structure">
+
+  <h3>ER Diagram</h3>
+  <img src="https://github.com/user-attachments/assets/1123d607-07b6-4ad3-941b-6358f268807b" alt="ER Diagram">
+</section>
+</div>
+ <footer>
+    <p>©Cassandra Halili | Class I102 | 2025</p>
+    <a href="https://github.com/CMHalili/Final-Lab-Task-1" target="_blank" style="color:var(--neon); text-shadow: 0 0 6px var(--neon);">View Finals Lab Task 1 on Github</a>
+  </footer>
+
+</body>
+</html>
